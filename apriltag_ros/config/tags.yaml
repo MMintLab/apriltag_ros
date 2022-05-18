@@ -19,38 +19,94 @@
 #   ]
 standalone_tags:
   [
-          # {id: 0, size: 0.161, name: tag_0}
-#          {id: 0, size: 0.039, name: tag_0},
-          {id: 0, size: 0.0385, name: tag_0},
-          {id: 1, size: 0.050, name: tag_1},
-          {id: 2, size: 0.050, name: tag_2},
-          {id: 3, size: 0.083, name: tag_3},
-          {id: 4, size: 0.0333, name: ft_tag},
-          { id: 5, size: 0.050, name: tag_5 },
-          { id: 6, size: 0.050, name: tag_6 },
-          { id: 7, size: 0.050, name: tag_7 },
+    { id: 0, size: 0.056 , name: tag_0 },
+    # {id: 1, size: 0.0563, name : tag_1},
+    # {id: 0, size: 0.043, name : tag_0},
+    # {id: 1, size: 0.043, name : tag_1},
+    #     {id: 10, size: 0.046, name: tag_10},
+    #    {id: 11, size: 0.046, name: tag_11},
+    #    {id: 12, size: 0.046, name: tag_12},
   ]
-# ## Tag bundle definitions
-# ### Remarks
-#
-# - name is optional
-# - x, y, z have default values of 0 thus they are optional
-# - qw has default value of 1 and qx, qy, qz have default values of 0 thus they are optional
-#
-# ### Syntax
-#
-# tag_bundles:
-#   [
-#     {
-#       name: 'CUSTOM_BUNDLE_NAME',
-#       layout:
-#         [
-#           {id: ID, size: SIZE, x: X_POS, y: Y_POS, z: Z_POS, qw: QUAT_W_VAL, qx: QUAT_X_VAL, qy: QUAT_Y_VAL, qz: QUAT_Z_VAL},
-#           ...
-#         ]
-#     },
-#     ...
-#   ]
+
 tag_bundles:
   [
+    {
+      name: 'block',
+      layout:
+        [
+          { id: 10, size: 0.046, x: 0.0285, y: 0.0, z: 0.0, qw: 0.5, qx: 0.5, qy: 0.5, qz: 0.5 },
+          { id: 11, size: 0.046, x: 0.0, y: 0.0285, z: 0.0, qw: 0.0, qx: 0.0, qy: 0.7071, qz: 0.7071 },
+          { id: 12, size: 0.046, x: -0.0285, y: 0.0, z: 0.0, qw: 0.5, qx: 0.5, qy: -0.5, qz: -0.5 },
+          { id: 13, size: 0.046, x: 0.0, y: -0.0285, z: 0.0, qw: 0.7071, qx: 0.7071, qy: 0.0, qz: 0.0 },
+          { id: 14, size: 0.046, x: 0.0, y: 0.0, z: 0.0285, qw: 0.7071, qx: 0.0, qy: 0.0, qz: 0.7071 },
+        ]
+    }
   ]
+  # ## Tag bundle definitions
+  # ### Remarks
+  #
+  # - name is optional
+  # - x, y, z have default values of 0 thus they are optional
+  # - qw has default value of 1 and qx, qy, qz have default values of 0 thus they are optional
+  #
+  # ### Syntax
+  #
+  # tag_bundles:
+  #   [
+  #     {
+  #       name: 'CUSTOM_BUNDLE_NAME',
+  #       layout:
+  #         [
+  #           {id: ID, size: SIZE, x: X_POS, y: Y_POS, z: Z_POS, qw: QUAT_W_VAL, qx: QUAT_X_VAL, qy: QUAT_Y_VAL, qz: QUAT_Z_VAL},
+  #           ...
+  #         ]
+  #     },
+  #     ...
+  #   ]
+  # tag_bundles:
+  #   [
+  #     {
+  #       name : '36h11_0_11',
+  #       layout :
+  #         [
+  #           {id: 0, size: 0.05, x: 0.0000, y: 0.0000, z: 0.0000, qw: 1.0000, qx: 0.0000, qy: 0.0000, qz: 0.0000},
+  #           {id: 9, size: 0.05, x: 0.2263, y: -0.3731, z: 0.2535, qw: 0.5272, qx: -0.4545, qy: -0.4650, qz: 0.5471},
+  #           {id: 10, size: 0.05, x: 0.0654, y: -0.1878, z: -0.0050, qw: 1.0000, qx: 0.0031, qy: -0.0060, qz: -0.0015},
+  #           {id: 8, size: 0.05, x: 0.1262, y: -0.1266, z: -0.0008, qw: 1.0000, qx: 0.0003, qy: 0.0028, qz: 0.0012},
+  #           {id: 4, size: 0.05, x: 0.0649, y: -0.0610, z: -0.0036, qw: 1.0000, qx: 0.0044, qy: 0.0057, qz: 0.0027},
+  #           {id: 7, size: 0.05, x: 0.2129, y: -0.3112, z: 0.1911, qw: 0.5314, qx: -0.4511, qy: -0.4519, qz: 0.5567},
+  #           {id: 6, size: 0.05, x: 0.0022, y: -0.1239, z: -0.0047, qw: 0.9999, qx: 0.0122, qy: -0.0020, qz: 0.0030},
+  #           {id: 5, size: 0.05, x: 0.2015, y: -0.2479, z: 0.1269, qw: 0.5339, qx: -0.4581, qy: -0.4472, qz: 0.5523},
+  #           {id: 17, size: 0.05, x: 0.2280, y: 0.1088, z: 0.2346, qw: 0.5270, qx: -0.4561, qy: -0.4415, qz: 0.5651},
+  #           {id: 14, size: 0.05, x: 0.2042, y: 0.1026, z: 0.1104, qw: 0.5269, qx: -0.4529, qy: -0.4486, qz: 0.5621},
+  #           {id: 16, size: 0.05, x: 0.2109, y: 0.1630, z: 0.1730, qw: 0.5229, qx: -0.4578, qy: -0.4435, qz: 0.5660},
+  #           {id: 15, size: 0.05, x: 0.2201, y: 0.0478, z: 0.1729, qw: 0.5338, qx: -0.4603, qy: -0.4345, qz: 0.5607},
+  #           {id: 13, size: 0.05, x: 0.1838, y: 0.1512, z: 0.0535, qw: 0.5276, qx: -0.4549, qy: -0.4499, qz: 0.5588},
+  #           {id: 12, size: 0.05, x: 0.1901, y: 0.0303, z: 0.0557, qw: 0.1751, qx: 0.3844, qy: -0.3644, qz: 0.8300},
+  #           {id: 11, size: 0.05, x: 0.2294, y: -0.2409, z: 0.2459, qw: 0.5316, qx: -0.4500, qy: -0.4566, qz: 0.5535},
+  #           {id: 3, size: 0.05, x: 0.2008, y: -0.3770, z: 0.1315, qw: 0.5342, qx: -0.4582, qy: -0.4514, qz: 0.5486},
+  #           {id: 2, size: 0.05, x: 0.1254, y: -0.0011, z: -0.0000, qw: 0.9998, qx: -0.0019, qy: 0.0162, qz: 0.0064},
+  #           {id: 1, size: 0.05, x: 0.1854, y: -0.3180, z: 0.0715, qw: 0.5361, qx: -0.4525, qy: -0.4471, qz: 0.5549}
+
+  #         ]
+
+  #     }
+  #   ]
+  # tag_bundles:
+  #   [
+  #     {
+  #       name : '36h11_0_11',
+  #       layout :
+  #         [
+
+  #           {id: 12, size: 0.05, x: 0.0000, y: 0.0000, z: 0.0000, qw: 1.0000, qx: 0.0000, qy: 0, qz: 0.0000},
+#           {id: 13, size: 0.05, x: 0.127, y: 0, z: -0.00, qw: 1.0000, qx: 0, qy: 0, qz: -0.00},
+#           {id: 14, size: 0.05, x: 0.064, y: -0.064, z: -0.000, qw: 1.0000, qx: 0, qy: 0, qz: 0.00},
+#           {id: 15, size: 0.05, x: 0.0, y: -0.127, z: -0.00, qw: 1.0000, qx: 0, qy: 0, qz: 0.00},
+#           {id: 16, size: 0.05, x: 0.127, y: -0.127, z: -0.00, qw: 0.9999, qx: 0, qy: 0, qz: 0.00},
+#           {id: 17, size: 0.05, x: 0.064, y: -0.191, z: -0.0000, qw: 0.9998, qx: 0, qy: 0., qz: 0.00},
+
+#         ]
+
+#     }
+#   ]
