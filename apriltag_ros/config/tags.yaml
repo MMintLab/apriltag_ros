@@ -57,4 +57,14 @@ standalone_tags:
 #   ]
 tag_bundles:
   [
+    {
+      name: 'bundle_1',
+      layout:
+      [
+            {id: 20, size: 0.02778, x: -0.06, y: -0.06, z: 0., qw: 1, qx: 0, qy: 0, qz: 0},
+            {id: 21, size: 0.02778, x: 0.06, y: 0.06, z: 0., qw: 1, qx: 0, qy: 0, qz: 0},
+            {id: 22, size: 0.02778, x: -0.06, y: 0.06, z: 0., qw: 1, qx: 0, qy: 0, qz: 0},
+      ]
+
+    },
   ]
