@@ -8,7 +8,7 @@
   <arg name="publish_tf" default="false"/>
   <arg name="params_package_name" default="apriltag_ros"/>
   <!-- Set parameters -->
-  <rosparam command="load" file="$(find apriltag_ros)/config/settings.yaml" ns="$(arg node_namespace)" />
+  <rosparam command="load" file="$(eval find(arg('params_package_name')) + '/config/settings.yaml')" ns="$(arg node_namespace)" />
 <!--   <rosparam command="load" file="$(find apriltag_ros)/config/tags.yaml" ns="$(arg node_namespace)" /> -->
   <rosparam command="load" file="$(eval find(arg('params_package_name')) + '/config/tags.yaml')" ns="$(arg node_namespace)" />
 
