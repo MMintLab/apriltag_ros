@@ -48,14 +48,26 @@ void ContinuousDetector::onInit ()
   it_ = std::shared_ptr<image_transport::ImageTransport>(
       new image_transport::ImageTransport(nh));
 
-  camera_image_subscriber_ =
-      it_->subscribeCamera("image_rect", 1,
-                          &ContinuousDetector::imageCallback, this);
-  tag_detections_publisher_ =
-      nh.advertise<AprilTagDetectionArray>("tag_detections", 1);
+  std::string camera_topic;
+  pnh.param<std::string>("camera_topic", camera_topic, "image_rect");
+
+  camera_image_subscriber_ = it_->subscribeCamera(camera_topic, 1,
+    &ContinuousDetector::imageCallback, this);
+
+  // Get the full topic name of the camera subscription
+  std::string camera_topic_name = camera_image_subscriber_.getTopic();
+
+  // Remove the last part of the topic name (usually "image_rect")
+  std::string base_topic = camera_topic_name.substr(0, camera_topic_name.find_last_of("/"));
+
+  // Create publishers with child topics
+  tag_detections_publisher_ = 
+    nh.advertise<AprilTagDetectionArray>(base_topic + "/tag_detections", 1);
+
   if (draw_tag_detections_image_)
   {
-    tag_detections_image_publisher_ = it_->advertise("tag_detections_image", 1);
+    tag_detections_image_publisher_ = 
+      it_->advertise(base_topic + "/tag_detections_image", 1);
   }
 }
 
